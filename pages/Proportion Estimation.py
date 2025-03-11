@@ -75,7 +75,7 @@ if go:
             <div style="
                 font-size: 36px;
                 font-weight: bold;
-                background-color: yellow;
+                background-color: #48D1CC;
                 padding: 10px;
                 border-radius: 10px;
                 text-align: center;">
@@ -91,7 +91,7 @@ if go:
                 <div style="
                 font-size: 36px;
                 font-weight: bold;
-                background-color: yellow;
+                background-color: #48D1CC;
                 padding: 10px;
                 border-radius: 10px;
                 text-align: center;">
@@ -132,12 +132,12 @@ st.markdown("""
 
 st.markdown("""
     <div style="
-        background-color: #f9f871;
+        background-color: #48D1CC;
         padding: 10px;
         border-left: 5px solid orange;
         border-radius: 5px;
         font-size: 18px;">
-        <b>Note:</b> The design effect option is only applicable when doing cluster random sampling, other wise the default is 1 and it is recommended to be done in consultation with a statistician.   
+        <b>Note:</b> The design effect option is only applicable when doing cluster random sampling, other wise the default is 1, and it is recommended to be done in consultation with a statistician.   
     </div>
     """, unsafe_allow_html=True)
 
