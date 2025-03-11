@@ -103,7 +103,7 @@ if go:
         <div style="
             font-size: 36px;
             font-weight: bold;
-            background-color: yellow;
+            background-color: #48D1CC;
             padding: 10px;
             border-radius: 10px;
             text-align: center;">
@@ -127,7 +127,7 @@ Click on the link to see the theory:[Click on the link](https://drive.google.com
 
 st.markdown("""
     <div style="
-        background-color: #f9f871;
+        background-color: #48D1CC;
         padding: 10px;
         border-left: 5px solid orange;
         border-radius: 5px;
