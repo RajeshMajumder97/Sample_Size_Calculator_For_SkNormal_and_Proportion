@@ -112,7 +112,7 @@ if go:
     </div>
     """, unsafe_allow_html=True)
     st.write(f"for estimating mean with **{(prec)}%** precision and **95%** confidence interval,where the design effect is **{round(designEffect,1)}** with **{(drpt)}%** drop-out from the sample.")
-    st.subheader("List of Sample Sizes at other Confidence Levels")
+    st.subheader("List of Sample Sizes at different Confidence Levels")
     st.dataframe(df)
     
 
