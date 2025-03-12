@@ -87,7 +87,7 @@ else:
 
 
 if go:
-    confidenceIntervals= [0.8,0.9,0.97,0.99,0.999,0.9999]
+    confidenceIntervals= [0.8,0.9,0.95,0.97,0.99,0.999,0.9999]
     out=[]
     for conf in confidenceIntervals:
         sample_size= nsampleSN(cv=(cv/100), prec=(prec/100), conf=conf, nmax=3000,nmin=25,designeffect=designEffect,dropOut=(drpt/100))
