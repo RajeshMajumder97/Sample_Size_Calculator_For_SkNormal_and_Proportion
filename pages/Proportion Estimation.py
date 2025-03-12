@@ -101,7 +101,7 @@ if go:
         """, unsafe_allow_html=True)
         st.write(f"participants to estimate the expected proportion with an absolute precision of **({(p)}% * {(d)}%) = {(d1)}%** and **95%** confidence interval, considering a design effect of **{round(designEffect,1)}** and **{(drpt)}%** drop-out from the sample.")
 
-    st.subheader("List of Sample Sizes at other Confidence Levels")
+    st.subheader("List of Sample Sizes at different Confidence Levels")
     st.dataframe(df)
 
 
