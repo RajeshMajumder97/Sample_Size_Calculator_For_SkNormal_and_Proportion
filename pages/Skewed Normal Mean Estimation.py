@@ -87,7 +87,7 @@ else:
 
 
 if go:
-    confidenceIntervals= [0.8,0.9,0.97,0.99,0.999,0.9999]
+    confidenceIntervals= [0.8,0.9,0.95,0.97,0.99,0.999,0.9999]
     out=[]
     for conf in confidenceIntervals:
         sample_size= nsampleSN(cv=(cv/100), prec=(prec/100), conf=conf, nmax=3000,nmin=25,designeffect=designEffect,dropOut=(drpt/100))
@@ -103,7 +103,7 @@ if go:
         <div style="
             font-size: 36px;
             font-weight: bold;
-            background-color: yellow;
+            background-color: #48D1CC;
             padding: 10px;
             border-radius: 10px;
             text-align: center;">
@@ -112,7 +112,7 @@ if go:
     </div>
     """, unsafe_allow_html=True)
     st.write(f"for estimating mean with **{(prec)}%** precision and **95%** confidence interval,where the design effect is **{round(designEffect,1)}** with **{(drpt)}%** drop-out from the sample.")
-    st.subheader("List of Sample Sizes at other Confidence Levels")
+    st.subheader("List of Sample Sizes at different Confidence Levels")
     st.dataframe(df)
     
 
@@ -127,7 +127,7 @@ Click on the link to see the theory:[Click on the link](https://drive.google.com
 
 st.markdown("""
     <div style="
-        background-color: #f9f871;
+        background-color: #48D1CC;
         padding: 10px;
         border-left: 5px solid orange;
         border-radius: 5px;

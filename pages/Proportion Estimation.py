@@ -56,7 +56,7 @@ else:
     go= st.button("Calculate Sample Size")
 
 if go:
-    confidenceIntervals= [0.8,0.9,0.97,0.99,0.999,0.9999]
+    confidenceIntervals= [0.8,0.9,0.95,0.97,0.99,0.999,0.9999]
     out=[]
 
     for conf in confidenceIntervals:
@@ -69,13 +69,13 @@ if go:
     })
     dds= nSampleProp(p=(p/100),d=(d1/100),Conf=0.95,designEf=designEffect,dropOut=(drpt/100))
     if(ads=='Absolute Precision'):
-        st.write(f"Asuming that **{(p)}%** of the subjects in the population have the factor of intrest,the study would require a sample size of:")
+        st.write(f"Asuming that **{(p)}%** of the individuals in the population exhibit the characteristic of interest, the study would need a sample size of:")
         st.markdown(f"""
         <div style="display: flex; justify-content: center;">
             <div style="
                 font-size: 36px;
                 font-weight: bold;
-                background-color: yellow;
+                background-color: #48D1CC;
                 padding: 10px;
                 border-radius: 10px;
                 text-align: center;">
@@ -83,15 +83,15 @@ if go:
             </div>
         </div>
         """, unsafe_allow_html=True)
-        st.write(f"for estimating the expected proportion with **{(d1)}%** absolute precision and **95%** confidence interval,where the design effect is **{round(designEffect,1)}** with **{(drpt)}%** drop-out from the sample.")
+        st.write(f"participants to estimate the expected proportion with an absolute precision of **{(d1)}%** and **95%** confidence interval, considering a design effect of **{round(designEffect,1)}** and **{(drpt)}%** drop-out from the sample.")
     else:
-        st.write(f"Asuming that **{(p)}%** of the subjects in the population have the factor of intrest,the study would require a sample size of:")
+        st.write(f"Asuming that **{(p)}%** of the individuals in the population exhibit the characteristic of interest, the study would need a sample size of:")
         st.markdown(f"""
             <div style="display: flex; justify-content: center;">
                 <div style="
                 font-size: 36px;
                 font-weight: bold;
-                background-color: yellow;
+                background-color: #48D1CC;
                 padding: 10px;
                 border-radius: 10px;
                 text-align: center;">
@@ -99,9 +99,9 @@ if go:
             </div>
         </div>
         """, unsafe_allow_html=True)
-        st.write(f"for estimating the expected proportion with **({(p)}% * {(d)}%) = {(d1)}%** absolute precision and **95%** confidence interval,where the design effect is **{designEffect}** with **{(drpt)}%** drop-out from the sample.")
+        st.write(f"participants to estimate the expected proportion with an absolute precision of **({(p)}% * {(d)}%) = {(d1)}%** and **95%** confidence interval, considering a design effect of **{round(designEffect,1)}** and **{(drpt)}%** drop-out from the sample.")
 
-    st.subheader("List of Sample Sizes at other Confidence Levels")
+    st.subheader("List of Sample Sizes at different Confidence Levels")
     st.dataframe(df)
 
 
@@ -126,18 +126,18 @@ st.markdown("""
 - **\( d \)**: Precision (margin of error).
 - **\( p \)**: Expected proportion.
 - **\( DE \) (Design Effect)**: Adjusts for clustering in sample selection.
-- **\( m \)**: Number of individuals per cluster.
+- **\( m \)**: Number of cluster.
 - **\( ICC \) (Intra-cluster correlation coefficient)**: Measures similarity within clusters.
 """)
 
 st.markdown("""
     <div style="
-        background-color: #f9f871;
+        background-color: #48D1CC;
         padding: 10px;
         border-left: 5px solid orange;
         border-radius: 5px;
         font-size: 18px;">
-        <b>Note:</b> The design effect option is only applicable when doing cluster random sampling, other wise the default is 1 and it is recommended to be done in consultation with a statistician.   
+        <b>Note:</b> The design effect option is only applicable when doing cluster random sampling, other wise the default is 1, and it is recommended to be done in consultation with a statistician.   
     </div>
     """, unsafe_allow_html=True)
 
