@@ -7,7 +7,7 @@ st.set_page_config(page_title="Home",
 
 st.title("Sample Size Calculator For Skewed Normal Mean And Proportion Estimation",)
 
-st.sidebar.markdown("The complete version of the sample size calculator is here:  [https://sample-size-calculator.app/](https://sample-size-calculator.streamlit.app/)")
+st.sidebar.markdown("The complete version of the sample size calculator is here:  [https://studysizer.streamlit.app/](https://studysizer.streamlit.app/)")
 
 hide_st_style="""<style>
 #MainMenu
