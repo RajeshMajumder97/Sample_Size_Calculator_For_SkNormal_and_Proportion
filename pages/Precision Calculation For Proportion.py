@@ -7,18 +7,29 @@ from scipy.special import erf
 st.set_page_config(page_title="Precision Calculation For Proportion",
                    page_icon="🧊")
 
-hide_st_style="""<style>
-#MainMenu
-{visiblility:hidden;
-}
-footer
-{visibility: hidden;
-}
-header
-{visibility: hidden;
-}
-</style>"""
-st.markdown(hide_st_style,unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    button[data-testid="stBaseButton-header"] {
+        display: none !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+#hide_st_style="""<style>
+##MainMenu
+#{visiblility:hidden;
+#}
+#footer
+#{visibility: hidden;
+#}
+#header
+#{visibility: hidden;
+#}
+#</style>"""
+#st.markdown(hide_st_style,unsafe_allow_html=True)
 
 
 # Streamlit App
